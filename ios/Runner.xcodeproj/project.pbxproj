@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,9 @@
 		CF24038F2ED57B3700DB3604 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF24038E2ED57B3700DB3604 /* WidgetKit.framework */; };
 		CF2403912ED57B3700DB3604 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2403902ED57B3700DB3604 /* SwiftUI.framework */; };
 		CF24039C2ED57B3900DB3604 /* test_widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF24038D2ED57B3700DB3604 /* test_widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CF2404102ED5841D00DB3604 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF24038E2ED57B3700DB3604 /* WidgetKit.framework */; };
+		CF2404112ED5841D00DB3604 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2403902ED57B3700DB3604 /* SwiftUI.framework */; };
+		CF24041E2ED5841F00DB3604 /* deeplinkExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF24040F2ED5841D00DB3604 /* deeplinkExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FBB79F2318690198E80A654F /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5819E2089D8C3A7636FD6E6 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CF24038C2ED57B3700DB3604;
 			remoteInfo = test_widgetExtension;
+		};
+		CF24041C2ED5841F00DB3604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF24040E2ED5841D00DB3604;
+			remoteInfo = deeplinkExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				CF24041E2ED5841F00DB3604 /* deeplinkExtension.appex in Embed Foundation Extensions */,
 				CF24039C2ED57B3900DB3604 /* test_widgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -88,6 +99,8 @@
 		CF24038D2ED57B3700DB3604 /* test_widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = test_widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF24038E2ED57B3700DB3604 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CF2403902ED57B3700DB3604 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CF24040F2ED5841D00DB3604 /* deeplinkExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = deeplinkExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2404242ED5846000DB3604 /* deeplinkExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deeplinkExtension.entitlements; sourceTree = "<group>"; };
 		DC0797D058929CE517E56638 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +112,13 @@
 			);
 			target = CF24038C2ED57B3700DB3604 /* test_widgetExtension */;
 		};
+		CF2404222ED5841F00DB3604 /* Exceptions for "deeplink" folder in "deeplinkExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CF24040E2ED5841D00DB3604 /* deeplinkExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -108,6 +128,14 @@
 				CF2403A12ED57B3900DB3604 /* Exceptions for "test_widget" folder in "test_widgetExtension" target */,
 			);
 			path = test_widget;
+			sourceTree = "<group>";
+		};
+		CF2404122ED5841D00DB3604 /* deeplink */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CF2404222ED5841F00DB3604 /* Exceptions for "deeplink" folder in "deeplinkExtension" target */,
+			);
+			path = deeplink;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -135,6 +163,15 @@
 			files = (
 				CF2403912ED57B3700DB3604 /* SwiftUI.framework in Frameworks */,
 				CF24038F2ED57B3700DB3604 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF24040C2ED5841D00DB3604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2404112ED5841D00DB3604 /* SwiftUI.framework in Frameworks */,
+				CF2404102ED5841D00DB3604 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +224,11 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				CF2404242ED5846000DB3604 /* deeplinkExtension.entitlements */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				CF2403922ED57B3700DB3604 /* test_widget */,
+				CF2404122ED5841D00DB3604 /* deeplink */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
 				610D25EF4E8A225BB2A792B7 /* Pods */,
@@ -203,6 +242,7 @@
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
 				CF24038D2ED57B3700DB3604 /* test_widgetExtension.appex */,
+				CF24040F2ED5841D00DB3604 /* deeplinkExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +302,7 @@
 			);
 			dependencies = (
 				CF24039B2ED57B3900DB3604 /* PBXTargetDependency */,
+				CF24041D2ED5841F00DB3604 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -288,6 +329,28 @@
 			productReference = CF24038D2ED57B3700DB3604 /* test_widgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		CF24040E2ED5841D00DB3604 /* deeplinkExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF2404232ED5841F00DB3604 /* Build configuration list for PBXNativeTarget "deeplinkExtension" */;
+			buildPhases = (
+				CF24040B2ED5841D00DB3604 /* Sources */,
+				CF24040C2ED5841D00DB3604 /* Frameworks */,
+				CF24040D2ED5841D00DB3604 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CF2404122ED5841D00DB3604 /* deeplink */,
+			);
+			name = deeplinkExtension;
+			packageProductDependencies = (
+			);
+			productName = deeplinkExtension;
+			productReference = CF24040F2ED5841D00DB3604 /* deeplinkExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,6 +373,9 @@
 					CF24038C2ED57B3700DB3604 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
+					CF24040E2ED5841D00DB3604 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
@@ -328,6 +394,7 @@
 				97C146ED1CF9000F007C117D /* Runner */,
 				331C8080294A63A400263BE5 /* RunnerTests */,
 				CF24038C2ED57B3700DB3604 /* test_widgetExtension */,
+				CF24040E2ED5841D00DB3604 /* deeplinkExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -352,6 +419,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CF24038B2ED57B3700DB3604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF24040D2ED5841D00DB3604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,9 +481,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,6 +558,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF24040B2ED5841D00DB3604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -492,6 +577,11 @@
 			isa = PBXTargetDependency;
 			target = CF24038C2ED57B3700DB3604 /* test_widgetExtension */;
 			targetProxy = CF24039A2ED57B3900DB3604 /* PBXContainerItemProxy */;
+		};
+		CF24041D2ED5841F00DB3604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF24040E2ED5841D00DB3604 /* deeplinkExtension */;
+			targetProxy = CF24041C2ED5841F00DB3604 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -921,6 +1011,135 @@
 			};
 			name = Profile;
 		};
+		CF24041F2ED5841F00DB3604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = deeplinkExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8D872QMNJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = deeplink/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = deeplink;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ioswidgettest.deeplink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF2404202ED5841F00DB3604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = deeplinkExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8D872QMNJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = deeplink/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = deeplink;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ioswidgettest.deeplink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF2404212ED5841F00DB3604 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = deeplinkExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8D872QMNJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = deeplink/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = deeplink;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ioswidgettest.deeplink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -960,6 +1179,16 @@
 				CF24039E2ED57B3900DB3604 /* Debug */,
 				CF24039F2ED57B3900DB3604 /* Release */,
 				CF2403A02ED57B3900DB3604 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF2404232ED5841F00DB3604 /* Build configuration list for PBXNativeTarget "deeplinkExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF24041F2ED5841F00DB3604 /* Debug */,
+				CF2404202ED5841F00DB3604 /* Release */,
+				CF2404212ED5841F00DB3604 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
